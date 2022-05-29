@@ -1,0 +1,474 @@
+/* WebSite Name: Yarn Organic Living website
+   Made by: Ritesh S. Gorle
+   Created: may 2022
+   Content: Yarn Organic Living products
+*/
+
+/*****************************************
+Table Of Contents:
+
+01. BASIC CSS Style
+02. SECTION 1: LANDING PAGE
+03. SECTION 2: OUR CLOTHES
+04. SECTION 3: FEEL GOOD
+05. SECTION 4: SUSTAINABLE GOODNESS
+06. SECTION 5: SENSE
+07. SECTION 6: FOOTER FORM 
+08. Media Queries
+******************************************/
+
+
+/******************************/
+/*    01. BASIC CSS Style     */
+/******************************/
+
+body {
+  font-family: Cooper Black; 
+  color: #0A2735;
+     }
+
+* {
+  box-sizing: border-box;
+  }
+
+h1, h2, h3{
+  font-family: DM Serif Display ;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #0A2735; /* Green */
+  width: 150px;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: DM Serif Display;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+
+
+
+/**************************************/
+/*    02. SECTION 1: LANDING PAGE     */
+/**************************************/
+
+.bg-img {
+  /* The image used */
+  background-image: url("top.PNG");
+
+  min-height: 600px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+ 
+}
+
+/* Navbar links */
+.topnav a {
+ 
+  color: #0A2735;
+  text-align: center;
+ 
+
+  font-size: 17px;
+}
+
+.span{
+  font-size: 12px;
+  font-family: Cooper Black;
+}
+
+
+.bottom-left {
+  position: absolute;
+  bottom: -300px;
+  left: 100px;
+}
+
+
+
+/*************************************/
+/*    03. SECTION 2: OUR CLOTHES     */
+/*************************************/
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block {
+  width: 100px;
+  font-size: 12px;
+}
+
+.block img{
+  width: 100px;
+  height: 80px;
+
+}
+
+
+/***********************************/
+/*    04. SECTION 3: FEEL GOOD     */
+/**********************************/
+
+.container1 {
+  position: relative;
+  text-align: center;
+  
+}
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+
+}
+
+.feel1{
+  width: 300px;
+  height: 200px;
+}
+
+
+.feel3{
+  width: 340px;
+  height: 240px;
+  box-shadow: 0px 0px 2px ,
+                 2px 2px 2px rgba(0,0,0,2);
+}
+
+
+
+
+.top-left {
+  position: absolute;
+  top: 6px;
+  left: 100px;
+}
+
+.top-left1 {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+
+.bottom-right {
+  position: absolute;
+  bottom: 52px;
+  right: 140px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**********************************************/
+/*    05. SECTION 4: SUSTAINABLE GOODNESS     */
+/**********************************************/
+
+.container2 {
+  position: relative;
+  text-align: center;
+ 
+}
+
+
+.bottom-left1 {
+  position: absolute;
+  top: 400px;
+  left: 100px;
+}
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+
+}
+
+
+/******************************/
+/*    06. SECTION 5: SENSE    */
+/******************************/
+.container3 {
+  position: relative;
+  text-align: center;
+  background: #B5BBB0;
+}
+
+.top-left2{
+   position: absolute;
+  top: 6px;
+  left: 100px;
+
+}
+
+
+.caro{
+
+height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+
+}
+
+
+
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: coral;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+ 
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  
+}
+
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+
+
+/************************************/
+/*    07. SECTION 6: FOOTER FORM    */
+/************************************/
+
+.inputFields {
+  margin: 2px 2px;
+  font-size: 18px;
+  padding: 2px;
+  width: 200px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+  background-color: white;
+   font-style: italic;
+}
+
+td{
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+table{
+  font-family: DM Serif Display, Italics ;
+}
+
+
+.btn1{
+  background-color: #0A2735; /* Green */
+  width: 100px;
+  border: none;
+  color: white;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-family: DM Serif Display;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+
+}
+
+
+
+
+/************************************/
+/*    08. Media Queries             */
+/************************************/
+
+
+@media only screen and (max-width: 480px) {
+
+/* Basic CSS */
+  h1, h2, h3, h4{
+ 
+  font-size: 18px;
+}
+
+p{
+  font-size: 8px;
+}
+
+
+/* SECTION 2: OUR CLOTHES */
+.block {
+  font-size: 8px;
+}
+
+
+.block img{
+  width: 40px;
+  height: 40px;
+
+}
+
+
+/* SECTION 3: FEEL GOOD */
+
+.feel1{
+  width: 100px;
+  height: 60px;
+}
+
+
+.feel3{
+  width: 100px;
+  height: 60px;
+  box-shadow: 0px 0px 2px ,
+                 2px 2px 2px rgba(0,0,0,2);
+}
+
+.top-left {
+  position: absolute;
+  top: 6px;
+  left: 60px;
+}
+
+.top-left1 {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+
+
+.bottom-right {
+  position: absolute;
+  bottom: 30px;
+  right: 70px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+/* SECTION 4: SUSTAINABLE GOODNESS */
+
+.bottom-left1 {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+
+
+
+/* SECTION 5: SENSE */
+
+.top-left2{
+   position: absolute;
+  top: 6px;
+  left: 60px;
+
+}
+
+
+
+
+  
+}
